@@ -62,12 +62,6 @@
       <DependentUpon>LoserBowl.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\LoserBowlContext.cs" />
-    <Compile Include="Forms\Menu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Menu.Designer.cs">
-      <DependentUpon>Menu.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Game.cs" />
     <Compile Include="Models\Team.cs" />

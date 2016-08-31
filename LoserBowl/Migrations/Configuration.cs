@@ -3,8 +3,6 @@ using LoserBowl.Models;
 
 namespace LoserBowl.Migrations
 {
-    using System;
-    using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
@@ -16,47 +14,274 @@ namespace LoserBowl.Migrations
             AutomaticMigrationDataLossAllowed = true;
         }
 
-        protected override void Seed(LoserBowl.Models.LoserBowlContext context)
+        protected override void Seed(LoserBowlContext context)
         {
             //if (System.Diagnostics.Debugger.IsAttached == false) System.Diagnostics.Debugger.Launch();
+            #region Team Seeding
 
             context.Teams.AddOrUpdate(
                 t => t.Abbreviation,
-                new Team {Abbreviation = "PIT", Location = "Pittsburg", Name = "Steelers"},
-                new Team {Abbreviation = "NYG", Location = "New York", Name = "Giants"},
-                new Team {Abbreviation = "MIN", Location = "Minnesota", Name = "Vikings"},
-                new Team {Abbreviation = "ATL", Location = "Atlanta", Name = "Falcons"},
-                new Team {Abbreviation = "LA", Location = "Los Angeles", Name = "Rams"},
-                new Team {Abbreviation = "DAL", Location = "Dallas", Name = "Cowboys"},
-                new Team {Abbreviation = "HOU", Location = "Houston", Name = "Texans"},
-                new Team {Abbreviation = "ARI", Location = "Arizona", Name = "Cardinals"},
-                new Team {Abbreviation = "NE", Location = "New England", Name = "Patriots"},
-                new Team {Abbreviation = "CIN", Location = "Cincinnati", Name = "Bengals"},
-                new Team {Abbreviation = "JAX", Location = "Jacksonville", Name = "Jaguars"},
-                new Team {Abbreviation = "TB", Location = "Tampa Bay", Name = "Buccaneers"},
-                new Team {Abbreviation = "GB", Location = "Green Bay", Name = "Packers"},
-                new Team {Abbreviation = "NO", Location = "New Orleans", Name = "Saints"},
-                new Team {Abbreviation = "NYJ", Location = "New York", Name = "Jets"},
-                new Team {Abbreviation = "SEA", Location = "Seattle", Name = "Seahawks"},
-                new Team {Abbreviation = "BUF", Location = "Buffalo", Name = "Bills"},
-                new Team {Abbreviation = "CHI", Location = "Chicago", Name = "Bears"},
-                new Team {Abbreviation = "KC", Location = "Kansas City", Name = "Chiefs"},
-                new Team {Abbreviation = "WSH", Location = "Washington", Name = "Redskins"},
-                new Team {Abbreviation = "OAK", Location = "Oakland", Name = "Raiders"},
-                new Team {Abbreviation = "DEN", Location = "Denver", Name = "Broncos"},
-                new Team {Abbreviation = "SD", Location = "San Diego", Name = "Chargers"},
-                new Team {Abbreviation = "CAR", Location = "Carolina", Name = "Panthers"},
-                new Team {Abbreviation = "SF", Location = "San Fransisco", Name = "49ers"},
-                new Team {Abbreviation = "IND", Location = "Indianapolis", Name = "Colts"},
-                new Team {Abbreviation = "MIA", Location = "Miami", Name = "Dolphins"},
-                new Team {Abbreviation = "DET", Location = "Detroit", Name = "Lions"},
-                new Team {Abbreviation = "PHI", Location = "Philadelphia", Name = "Eagles"},
-                new Team {Abbreviation = "TEN", Location = "Tennessee", Name = "Titans"},
-                new Team {Abbreviation = "CLE", Location = "Clevland", Name = "Browns"},
-                new Team {Abbreviation = "BAL", Location = "Baltimore", Name = "Ravens"});
+                new Team
+                {
+                    Abbreviation = "NE",
+                    Location = "New England",
+                    Name = "Patriots",
+                    Division = "AFC East",
+                    SeedRank = 3
+                },
+                new Team
+                {
+                    Abbreviation = "BUF",
+                    Location = "Buffalo",
+                    Name = "Bills",
+                    Division = "AFC East",
+                    SeedRank = 18
+                },
+                new Team
+                {
+                    Abbreviation = "NYJ",
+                    Location = "New York",
+                    Name = "Jets",
+                    Division = "AFC East",
+                    SeedRank = 21
+                },
+                new Team
+                {
+                    Abbreviation = "MIA",
+                    Location = "Miami",
+                    Name = "Dolphins",
+                    Division = "AFC East",
+                    SeedRank = 27
+                },
+                new Team
+                {
+                    Abbreviation = "DEN",
+                    Location = "Denver",
+                    Name = "Broncos",
+                    Division = "AFC West",
+                    SeedRank = 5
+                },
+                new Team
+                {
+                    Abbreviation = "KC",
+                    Location = "Kansas City",
+                    Name = "Chiefs",
+                    Division = "AFC West",
+                    SeedRank = 9
+                },
+                new Team
+                {
+                    Abbreviation = "OAK",
+                    Location = "Oakland",
+                    Name = "Raiders",
+                    Division = "AFC West",
+                    SeedRank = 11
+                },
+                new Team
+                {
+                    Abbreviation = "SD",
+                    Location = "San Diego",
+                    Name = "Chargers",
+                    Division = "AFC West",
+                    SeedRank = 29
+                },
+                new Team
+                {
+                    Abbreviation = "PIT",
+                    Location = "Pittsburg",
+                    Name = "Steelers",
+                    Division = "AFC North",
+                    SeedRank = 4
+                },
+                new Team
+                {
+                    Abbreviation = "CIN",
+                    Location = "Cincinnati",
+                    Name = "Bengals",
+                    Division = "AFC North",
+                    SeedRank = 7
+                },
+                new Team
+                {
+                    Abbreviation = "BAL",
+                    Location = "Baltimore",
+                    Name = "Ravens",
+                    Division = "AFC North",
+                    SeedRank = 20
+                },
+                new Team
+                {
+                    Abbreviation = "CLE",
+                    Location = "Clevland",
+                    Name = "Browns",
+                    Division = "AFC North",
+                    SeedRank = 32
+                },
+                new Team
+                {
+                    Abbreviation = "HOU",
+                    Location = "Houston",
+                    Name = "Texans",
+                    Division = "AFC South",
+                    SeedRank = 12
+                },
+                new Team
+                {
+                    Abbreviation = "IND",
+                    Location = "Indianapolis",
+                    Name = "Colts",
+                    Division = "AFC South",
+                    SeedRank = 14
+                },
+                new Team
+                {
+                    Abbreviation = "JAX",
+                    Location = "Jacksonville",
+                    Name = "Jaguars",
+                    Division = "AFC South",
+                    SeedRank = 19
+                },
+                new Team
+                {
+                    Abbreviation = "TEN",
+                    Location = "Tennessee",
+                    Name = "Titans",
+                    Division = "AFC South",
+                    SeedRank = 31
+                },
+                new Team
+                {
+                    Abbreviation = "DAL",
+                    Location = "Dallas",
+                    Name = "Cowboys",
+                    Division = "NFC East",
+                    SeedRank = 13
+                },
+                new Team
+                {
+                    Abbreviation = "WSH",
+                    Location = "Washington",
+                    Name = "Redskins",
+                    Division = "NFC East",
+                    SeedRank = 15
+                },
+                new Team
+                {
+                    Abbreviation = "NYG",
+                    Location = "New York",
+                    Name = "Giants",
+                    Division = "NFC East",
+                    SeedRank = 17
+                },
+                new Team
+                {
+                    Abbreviation = "PHI",
+                    Location = "Philadelphia",
+                    Name = "Eagles",
+                    Division = "NFC East",
+                    SeedRank = 24
+                },
+                new Team
+                {
+                    Abbreviation = "ARI",
+                    Location = "Arizona",
+                    Name = "Cardinals",
+                    Division = "NFC West",
+                    SeedRank = 1
+                },
+                new Team
+                {
+                    Abbreviation = "SEA",
+                    Location = "Seattle",
+                    Name = "Seahawks",
+                    Division = "NFC West",
+                    SeedRank = 10
+                },
+                new Team
+                {
+                    Abbreviation = "LA",
+                    Location = "Los Angeles",
+                    Name = "Rams",
+                    Division = "NFC West",
+                    SeedRank = 22
+                },
+                new Team
+                {
+                    Abbreviation = "SF",
+                    Location = "San Fransisco",
+                    Name = "49ers",
+                    Division = "NFC West",
+                    SeedRank = 30
+                },
+                new Team
+                {
+                    Abbreviation = "MIN",
+                    Location = "Minnesota",
+                    Name = "Vikings",
+                    Division = "NFC North",
+                    SeedRank = 6
+                },
+                new Team
+                {
+                    Abbreviation = "GB",
+                    Location = "Green Bay",
+                    Name = "Packers",
+                    Division = "NFC North",
+                    SeedRank = 8
+                },
+                new Team
+                {
+                    Abbreviation = "CHI",
+                    Location = "Chicago",
+                    Name = "Bears",
+                    Division = "NFC North",
+                    SeedRank = 16
+                },
+                new Team
+                {
+                    Abbreviation = "DET",
+                    Location = "Detroit",
+                    Name = "Lions",
+                    Division = "NFC North",
+                    SeedRank = 23
+                },
+                new Team
+                {
+                    Abbreviation = "CAR",
+                    Location = "Carolina",
+                    Name = "Panthers",
+                    Division = "NFC South",
+                    SeedRank = 2
+                },
+                new Team
+                {
+                    Abbreviation = "NO",
+                    Location = "New Orleans",
+                    Name = "Saints",
+                    Division = "NFC South",
+                    SeedRank = 25
+                },
+                new Team
+                {
+                    Abbreviation = "ATL",
+                    Location = "Atlanta",
+                    Name = "Falcons",
+                    Division = "NFC South",
+                    SeedRank = 26
+                },
+                new Team
+                {
+                    Abbreviation = "TB",
+                    Location = "Tampa Bay",
+                    Name = "Buccaneers",
+                    Division = "NFC South",
+                    SeedRank = 28
+                });
 
             context.SaveChanges();
-            
+
+            #endregion
+
             // Week 1
             UpsertGame(1, "Thursday", "CAR", "DEN", context);
             UpsertGame(1, "Sunday", "TB", "ATL", context);
