@@ -1,6 +1,6 @@
-﻿namespace LoserBowl
+﻿namespace LoserBowl.Forms
 {
-    partial class Form1
+    partial class LoserBowl
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.buttonMenu = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // buttonMenu
+            // 
+            this.buttonMenu.Location = new System.Drawing.Point(12, 12);
+            this.buttonMenu.Name = "buttonMenu";
+            this.buttonMenu.Size = new System.Drawing.Size(75, 23);
+            this.buttonMenu.TabIndex = 0;
+            this.buttonMenu.Text = "Menu";
+            this.buttonMenu.UseVisualStyleBackColor = true;
+            // 
+            // LoserBowl
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(813, 372);
+            this.Controls.Add(this.buttonMenu);
+            this.Name = "LoserBowl";
+            this.Text = "Loser Bowl";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button buttonMenu;
     }
 }
 
