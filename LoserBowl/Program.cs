@@ -17,11 +17,11 @@ namespace LoserBowl
         [STAThread]
         static void Main()
         {
-            Database.SetInitializer(new MigrateDatabaseToLatestVersion<LoserBowlContext, Configuration>());
-            using (var context = new LoserBowlContext())
-            {
-                context.Database.Initialize(true);
-            }
+            //Database.SetInitializer(new MigrateDatabaseToLatestVersion<LoserBowlContext, Configuration>());
+            //using (var context = new LoserBowlContext())
+            //{
+            //    context.Database.Initialize(true);
+            //}
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Forms.LoserBowl());

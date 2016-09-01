@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LoserBowl.Models
 {
@@ -17,6 +15,7 @@ namespace LoserBowl.Models
         public int AwayTeamId { get; set; }
         public virtual ICollection<Team> Teams { get; set; }
 
+        public const double AwayWeight = 0.75;
         public double Diff
         {
             get
@@ -24,7 +23,7 @@ namespace LoserBowl.Models
                 var home = Teams.Single(t => t.Id == HomeTeamId);
                 var away = Teams.Single(t => t.Id == AwayTeamId);
                 var homeStrength = home.Strength;
-                var awayStrength = away.Strength;
+                var awayStrength = away.Strength*AwayWeight;
                 return Math.Max(homeStrength, awayStrength) - Math.Min(homeStrength, awayStrength);
             }
         }
@@ -35,6 +34,16 @@ namespace LoserBowl.Models
             {
                 if (HomeScore > AwayScore) return Teams.Single(t => t.Id == HomeTeamId);
                 if (HomeScore < AwayScore) return Teams.Single(t => t.Id == AwayTeamId);
+                return null;
+            }
+        }
+
+        public Team Loser
+        {
+            get
+            {
+                if (HomeScore > AwayScore) return Teams.Single(t => t.Id == AwayTeamId);
+                if (HomeScore < AwayScore) return Teams.Single(t => t.Id == HomeTeamId);
                 return null;
             }
         }

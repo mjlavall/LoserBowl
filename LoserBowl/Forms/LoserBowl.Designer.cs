@@ -30,6 +30,7 @@ namespace LoserBowl.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoserBowl));
             this.numericUpDownWeek = new System.Windows.Forms.NumericUpDown();
             this.listBoxGames = new System.Windows.Forms.ListBox();
             this.checkedListBoxAFCEast = new System.Windows.Forms.CheckedListBox();
@@ -49,6 +50,7 @@ namespace LoserBowl.Forms
             this.label8 = new System.Windows.Forms.Label();
             this.checkedListBoxNFCSouth = new System.Windows.Forms.CheckedListBox();
             this.buttonRecordScores = new System.Windows.Forms.Button();
+            this.buttonHandicap = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWeek)).BeginInit();
             this.SuspendLayout();
             // 
@@ -248,7 +250,7 @@ namespace LoserBowl.Forms
             // 
             // buttonRecordScores
             // 
-            this.buttonRecordScores.Location = new System.Drawing.Point(1182, 12);
+            this.buttonRecordScores.Location = new System.Drawing.Point(1093, 12);
             this.buttonRecordScores.Name = "buttonRecordScores";
             this.buttonRecordScores.Size = new System.Drawing.Size(93, 23);
             this.buttonRecordScores.TabIndex = 19;
@@ -256,11 +258,22 @@ namespace LoserBowl.Forms
             this.buttonRecordScores.UseVisualStyleBackColor = true;
             this.buttonRecordScores.Click += new System.EventHandler(this.buttonRecordScores_Click);
             // 
+            // buttonHandicap
+            // 
+            this.buttonHandicap.Location = new System.Drawing.Point(1192, 12);
+            this.buttonHandicap.Name = "buttonHandicap";
+            this.buttonHandicap.Size = new System.Drawing.Size(93, 23);
+            this.buttonHandicap.TabIndex = 20;
+            this.buttonHandicap.Text = "Handicap";
+            this.buttonHandicap.UseVisualStyleBackColor = true;
+            this.buttonHandicap.Click += new System.EventHandler(this.buttonHandicap_Click);
+            // 
             // LoserBowl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1297, 439);
+            this.Controls.Add(this.buttonHandicap);
             this.Controls.Add(this.buttonRecordScores);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.checkedListBoxNFCSouth);
@@ -280,6 +293,7 @@ namespace LoserBowl.Forms
             this.Controls.Add(this.listBoxGames);
             this.Controls.Add(this.numericUpDownWeek);
             this.Controls.Add(this.checkedListBoxAFCEast);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoserBowl";
             this.Text = "Loser Bowl";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWeek)).EndInit();
@@ -308,6 +322,7 @@ namespace LoserBowl.Forms
         private Label label8;
         private CheckedListBox checkedListBoxNFCSouth;
         private Button buttonRecordScores;
+        private Button buttonHandicap;
     }
 }
 

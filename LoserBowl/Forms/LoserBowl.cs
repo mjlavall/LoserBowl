@@ -89,5 +89,10 @@ namespace LoserBowl.Forms
         {
             new RecordScores(Week, this).Show();
         }
+
+        private void buttonHandicap_Click(object sender, EventArgs e)
+        {
+            new Handicap(this).Show();
+        }
     }
 }
