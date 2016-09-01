@@ -33,7 +33,7 @@ namespace LoserBowl.Forms
 
         private void UpdateGames()
         {
-            listBoxGames.DataSource = Games.OrderByDescending(g => g.Diff).ToList();
+            listBoxGames.DataSource = Games.ToList().Where(g => g.Prediction.Selected == Week || g.Prediction.Selected == 0).OrderByDescending(g => g.Diff).ToList();
             listBoxGames.DisplayMember = "MatchDisplay";
         }
 

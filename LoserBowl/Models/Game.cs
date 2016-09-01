@@ -48,6 +48,16 @@ namespace LoserBowl.Models
             }
         }
 
+        public Team Prediction
+        {
+            get
+            {
+                var home = Teams.Single(t => t.Id == HomeTeamId);
+                var away = Teams.Single(t => t.Id == AwayTeamId);
+                return home.Strength > away.Strength*AwayWeight ? away : home;
+            }
+        }
+
         private string DaySpaces
         {
             get
