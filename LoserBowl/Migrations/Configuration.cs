@@ -27,7 +27,8 @@ namespace LoserBowl.Migrations
                     Location = "New England",
                     Name = "Patriots",
                     Division = "AFC East",
-                    SeedRank = 3
+                    SeedRank = 3,
+                    PreviousWoL = 8
                 },
                 new Team
                 {
@@ -35,7 +36,8 @@ namespace LoserBowl.Migrations
                     Location = "Buffalo",
                     Name = "Bills",
                     Division = "AFC East",
-                    SeedRank = 18
+                    SeedRank = 18,
+                    PreviousWoL = 0
                 },
                 new Team
                 {
@@ -43,7 +45,8 @@ namespace LoserBowl.Migrations
                     Location = "New York",
                     Name = "Jets",
                     Division = "AFC East",
-                    SeedRank = 21
+                    SeedRank = 21,
+                    PreviousWoL = 4
                 },
                 new Team
                 {
@@ -51,7 +54,8 @@ namespace LoserBowl.Migrations
                     Location = "Miami",
                     Name = "Dolphins",
                     Division = "AFC East",
-                    SeedRank = 27
+                    SeedRank = 27,
+                    PreviousWoL = -4
                 },
                 new Team
                 {
@@ -59,7 +63,8 @@ namespace LoserBowl.Migrations
                     Location = "Denver",
                     Name = "Broncos",
                     Division = "AFC West",
-                    SeedRank = 5
+                    SeedRank = 5,
+                    PreviousWoL = 8
                 },
                 new Team
                 {
@@ -67,7 +72,8 @@ namespace LoserBowl.Migrations
                     Location = "Kansas City",
                     Name = "Chiefs",
                     Division = "AFC West",
-                    SeedRank = 9
+                    SeedRank = 9,
+                    PreviousWoL = 6
                 },
                 new Team
                 {
@@ -75,7 +81,8 @@ namespace LoserBowl.Migrations
                     Location = "Oakland",
                     Name = "Raiders",
                     Division = "AFC West",
-                    SeedRank = 11
+                    SeedRank = 11,
+                    PreviousWoL = -2
                 },
                 new Team
                 {
@@ -83,7 +90,8 @@ namespace LoserBowl.Migrations
                     Location = "San Diego",
                     Name = "Chargers",
                     Division = "AFC West",
-                    SeedRank = 29
+                    SeedRank = 29,
+                    PreviousWoL = -8
                 },
                 new Team
                 {
@@ -91,7 +99,8 @@ namespace LoserBowl.Migrations
                     Location = "Pittsburg",
                     Name = "Steelers",
                     Division = "AFC North",
-                    SeedRank = 4
+                    SeedRank = 4,
+                    PreviousWoL = 4
                 },
                 new Team
                 {
@@ -99,7 +108,8 @@ namespace LoserBowl.Migrations
                     Location = "Cincinnati",
                     Name = "Bengals",
                     Division = "AFC North",
-                    SeedRank = 7
+                    SeedRank = 7,
+                    PreviousWoL = 8
                 },
                 new Team
                 {
@@ -107,7 +117,8 @@ namespace LoserBowl.Migrations
                     Location = "Baltimore",
                     Name = "Ravens",
                     Division = "AFC North",
-                    SeedRank = 20
+                    SeedRank = 20,
+                    PreviousWoL = -6
                 },
                 new Team
                 {
@@ -115,7 +126,8 @@ namespace LoserBowl.Migrations
                     Location = "Clevland",
                     Name = "Browns",
                     Division = "AFC North",
-                    SeedRank = 32
+                    SeedRank = 32,
+                    PreviousWoL = -10
                 },
                 new Team
                 {
@@ -123,7 +135,8 @@ namespace LoserBowl.Migrations
                     Location = "Houston",
                     Name = "Texans",
                     Division = "AFC South",
-                    SeedRank = 12
+                    SeedRank = 12,
+                    PreviousWoL = 2
                 },
                 new Team
                 {
@@ -131,7 +144,8 @@ namespace LoserBowl.Migrations
                     Location = "Indianapolis",
                     Name = "Colts",
                     Division = "AFC South",
-                    SeedRank = 14
+                    SeedRank = 14,
+                    PreviousWoL = 0
                 },
                 new Team
                 {
@@ -139,7 +153,8 @@ namespace LoserBowl.Migrations
                     Location = "Jacksonville",
                     Name = "Jaguars",
                     Division = "AFC South",
-                    SeedRank = 19
+                    SeedRank = 19,
+                    PreviousWoL = -6
                 },
                 new Team
                 {
@@ -147,7 +162,8 @@ namespace LoserBowl.Migrations
                     Location = "Tennessee",
                     Name = "Titans",
                     Division = "AFC South",
-                    SeedRank = 31
+                    SeedRank = 31,
+                    PreviousWoL = -10
                 },
                 new Team
                 {
@@ -155,7 +171,8 @@ namespace LoserBowl.Migrations
                     Location = "Dallas",
                     Name = "Cowboys",
                     Division = "NFC East",
-                    SeedRank = 13
+                    SeedRank = 13,
+                    PreviousWoL = -8
                 },
                 new Team
                 {
@@ -163,7 +180,8 @@ namespace LoserBowl.Migrations
                     Location = "Washington",
                     Name = "Redskins",
                     Division = "NFC East",
-                    SeedRank = 15
+                    SeedRank = 15,
+                    PreviousWoL = 2
                 },
                 new Team
                 {
@@ -171,7 +189,8 @@ namespace LoserBowl.Migrations
                     Location = "New York",
                     Name = "Giants",
                     Division = "NFC East",
-                    SeedRank = 17
+                    SeedRank = 17,
+                    PreviousWoL = -4
                 },
                 new Team
                 {
@@ -179,7 +198,8 @@ namespace LoserBowl.Migrations
                     Location = "Philadelphia",
                     Name = "Eagles",
                     Division = "NFC East",
-                    SeedRank = 24
+                    SeedRank = 24,
+                    PreviousWoL = -2
                 },
                 new Team
                 {
@@ -187,7 +207,8 @@ namespace LoserBowl.Migrations
                     Location = "Arizona",
                     Name = "Cardinals",
                     Division = "NFC West",
-                    SeedRank = 1
+                    SeedRank = 1,
+                    PreviousWoL = 10
                 },
                 new Team
                 {
@@ -195,7 +216,8 @@ namespace LoserBowl.Migrations
                     Location = "Seattle",
                     Name = "Seahawks",
                     Division = "NFC West",
-                    SeedRank = 10
+                    SeedRank = 10,
+                    PreviousWoL = 4
                 },
                 new Team
                 {
@@ -203,7 +225,8 @@ namespace LoserBowl.Migrations
                     Location = "Los Angeles",
                     Name = "Rams",
                     Division = "NFC West",
-                    SeedRank = 22
+                    SeedRank = 22,
+                    PreviousWoL = -2
                 },
                 new Team
                 {
@@ -211,7 +234,8 @@ namespace LoserBowl.Migrations
                     Location = "San Fransisco",
                     Name = "49ers",
                     Division = "NFC West",
-                    SeedRank = 30
+                    SeedRank = 30,
+                    PreviousWoL = -6
                 },
                 new Team
                 {
@@ -219,7 +243,8 @@ namespace LoserBowl.Migrations
                     Location = "Minnesota",
                     Name = "Vikings",
                     Division = "NFC North",
-                    SeedRank = 6
+                    SeedRank = 6,
+                    PreviousWoL = 6
                 },
                 new Team
                 {
@@ -227,7 +252,8 @@ namespace LoserBowl.Migrations
                     Location = "Green Bay",
                     Name = "Packers",
                     Division = "NFC North",
-                    SeedRank = 8
+                    SeedRank = 8,
+                    PreviousWoL = 4
                 },
                 new Team
                 {
@@ -235,7 +261,8 @@ namespace LoserBowl.Migrations
                     Location = "Chicago",
                     Name = "Bears",
                     Division = "NFC North",
-                    SeedRank = 16
+                    SeedRank = 16,
+                    PreviousWoL = -4
                 },
                 new Team
                 {
@@ -243,7 +270,8 @@ namespace LoserBowl.Migrations
                     Location = "Detroit",
                     Name = "Lions",
                     Division = "NFC North",
-                    SeedRank = 23
+                    SeedRank = 23,
+                    PreviousWoL = -4
                 },
                 new Team
                 {
@@ -251,7 +279,8 @@ namespace LoserBowl.Migrations
                     Location = "Carolina",
                     Name = "Panthers",
                     Division = "NFC South",
-                    SeedRank = 2
+                    SeedRank = 2,
+                    PreviousWoL = 14
                 },
                 new Team
                 {
@@ -259,7 +288,8 @@ namespace LoserBowl.Migrations
                     Location = "New Orleans",
                     Name = "Saints",
                     Division = "NFC South",
-                    SeedRank = 25
+                    SeedRank = 25,
+                    PreviousWoL = -2
                 },
                 new Team
                 {
@@ -267,7 +297,8 @@ namespace LoserBowl.Migrations
                     Location = "Atlanta",
                     Name = "Falcons",
                     Division = "NFC South",
-                    SeedRank = 26
+                    SeedRank = 26,
+                    PreviousWoL = 0
                 },
                 new Team
                 {
@@ -275,7 +306,8 @@ namespace LoserBowl.Migrations
                     Location = "Tampa Bay",
                     Name = "Buccaneers",
                     Division = "NFC South",
-                    SeedRank = 28
+                    SeedRank = 28,
+                    PreviousWoL = -4
                 });
 
             context.SaveChanges();
@@ -567,11 +599,14 @@ namespace LoserBowl.Migrations
             var away = context.Teams.Single(t => t.Abbreviation == a);
             var home = context.Teams.Single(t => t.Abbreviation == h);
             var existingGame = week.SingleOrDefault(g => g.Teams.Contains(away) || g.Teams.Contains(home));
-            if (existingGame != null) context.Games.Remove(existingGame);
-            var game = new Game {Week = w, Day = d, HomeTeamId = home.Id, AwayTeamId = away.Id, Teams = new List<Team>()};
-            game.Teams.Add(home);
-            game.Teams.Add(away);
-            context.Games.Add(game);
+            bool updating = existingGame != null;
+            var game = existingGame ?? new Game();
+            game.Week = w;
+            game.Day = d;
+            game.HomeTeamId = home.Id;
+            game.AwayTeamId = away.Id;
+            game.Teams = new List<Team> {home, away};
+            if(!updating) context.Games.Add(game);
         }
     }
 }

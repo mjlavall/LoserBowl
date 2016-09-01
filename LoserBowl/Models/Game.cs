@@ -17,6 +17,28 @@ namespace LoserBowl.Models
         public int AwayTeamId { get; set; }
         public virtual ICollection<Team> Teams { get; set; }
 
+        public double Diff
+        {
+            get
+            {
+                var home = Teams.Single(t => t.Id == HomeTeamId);
+                var away = Teams.Single(t => t.Id == AwayTeamId);
+                var homeStrength = home.Strength;
+                var awayStrength = away.Strength;
+                return Math.Max(homeStrength, awayStrength) - Math.Min(homeStrength, awayStrength);
+            }
+        }
+
+        public Team Winner
+        {
+            get
+            {
+                if (HomeScore > AwayScore) return Teams.Single(t => t.Id == HomeTeamId);
+                if (HomeScore < AwayScore) return Teams.Single(t => t.Id == AwayTeamId);
+                return null;
+            }
+        }
+
         private string DaySpaces
         {
             get
@@ -29,10 +51,18 @@ namespace LoserBowl.Models
                 return spaces;
             }
         }
-
         public string DayDisplay => Day + DaySpaces;
-        public string MatchDisplay => $"{DayDisplay} {Teams.Single(t => t.Id == AwayTeamId).AwayName} AT {Teams.Single(t => t.Id == HomeTeamId).HomeName}";
-
+        public string MatchDisplay
+        {
+            get
+            {
+                var home = Teams.Single(t => t.Id == HomeTeamId);
+                var away = Teams.Single(t => t.Id == AwayTeamId);
+                var loser = home.Strength > away.Strength ? away : home;
+                return $"{DayDisplay} {away.AwayName} AT {home.HomeName}" +
+            $"  Loser: {loser.Name} Confidence: {Diff}";
+            }
+        }
         public override string ToString() => $"{Teams.Single(t => t.Id == AwayTeamId)} AT {Teams.Single(t => t.Id == HomeTeamId)}";
     }
 }

@@ -48,6 +48,7 @@ namespace LoserBowl.Forms
             this.checkedListBoxNFCNorth = new System.Windows.Forms.CheckedListBox();
             this.label8 = new System.Windows.Forms.Label();
             this.checkedListBoxNFCSouth = new System.Windows.Forms.CheckedListBox();
+            this.buttonRecordScores = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWeek)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,7 +83,7 @@ namespace LoserBowl.Forms
             this.listBoxGames.Location = new System.Drawing.Point(465, 41);
             this.listBoxGames.Name = "listBoxGames";
             this.listBoxGames.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.listBoxGames.Size = new System.Drawing.Size(458, 388);
+            this.listBoxGames.Size = new System.Drawing.Size(820, 388);
             this.listBoxGames.TabIndex = 10;
             // 
             // checkedListBoxAFCEast
@@ -245,11 +246,22 @@ namespace LoserBowl.Forms
             this.checkedListBoxNFCSouth.TabIndex = 9;
             this.checkedListBoxNFCSouth.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBox_ItemCheck);
             // 
+            // buttonRecordScores
+            // 
+            this.buttonRecordScores.Location = new System.Drawing.Point(1182, 12);
+            this.buttonRecordScores.Name = "buttonRecordScores";
+            this.buttonRecordScores.Size = new System.Drawing.Size(93, 23);
+            this.buttonRecordScores.TabIndex = 19;
+            this.buttonRecordScores.Text = "Record Scores";
+            this.buttonRecordScores.UseVisualStyleBackColor = true;
+            this.buttonRecordScores.Click += new System.EventHandler(this.buttonRecordScores_Click);
+            // 
             // LoserBowl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(937, 439);
+            this.ClientSize = new System.Drawing.Size(1297, 439);
+            this.Controls.Add(this.buttonRecordScores);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.checkedListBoxNFCSouth);
             this.Controls.Add(this.label7);
@@ -295,6 +307,7 @@ namespace LoserBowl.Forms
         private CheckedListBox checkedListBoxNFCNorth;
         private Label label8;
         private CheckedListBox checkedListBoxNFCSouth;
+        private Button buttonRecordScores;
     }
 }
 

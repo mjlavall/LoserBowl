@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using LoserBowl.Models;
 
@@ -13,8 +8,8 @@ namespace LoserBowl.Forms
 {
     public partial class LoserBowl : Form
     {
-        private readonly LoserBowlContext _context = new LoserBowlContext();
-        private List<Game> Games => _context.Games.Where(g => g.Week == (int) numericUpDownWeek.Value).ToList();
+        public readonly LoserBowlContext Context = new LoserBowlContext();
+        private List<Game> Games => Context.Games.Where(g => g.Week == (int) numericUpDownWeek.Value).ToList();
         private List<CheckedListBox> DivisionListBoxes => new List<CheckedListBox>
         {
             checkedListBoxAFCEast, checkedListBoxAFCWest, checkedListBoxAFCNorth, checkedListBoxAFCSouth,
@@ -25,7 +20,7 @@ namespace LoserBowl.Forms
         public LoserBowl()
         {
             InitializeComponent();
-            numericUpDownWeek.Value = _context.Teams.Count(t => t.Selected > 0) + 1;
+            numericUpDownWeek.Value = Context.Teams.Count(t => t.Selected > 0) + 1;
             BindData();
             UpdateGames();
         }
@@ -38,7 +33,7 @@ namespace LoserBowl.Forms
 
         private void UpdateGames()
         {
-            listBoxGames.DataSource = Games;
+            listBoxGames.DataSource = Games.OrderByDescending(g => g.Diff).ToList();
             listBoxGames.DisplayMember = "MatchDisplay";
         }
 
@@ -87,7 +82,12 @@ namespace LoserBowl.Forms
                 }
             }
 
-            _context.SaveChanges();
+            Context.SaveChanges();
+        }
+
+        private void buttonRecordScores_Click(object sender, EventArgs e)
+        {
+            new RecordScores(Week, this).Show();
         }
     }
 }
