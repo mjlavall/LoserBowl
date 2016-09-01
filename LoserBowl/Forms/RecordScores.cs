@@ -8,7 +8,7 @@ namespace LoserBowl.Forms
 {
     public partial class RecordScores : Form
     {
-        private LoserBowlContext Context => _loserbowl._context;
+        private LoserBowlContext Context => _loserbowl.Context;
         private List<Game> Games => Context.Games.Where(g => g.Week == _week).ToList();
         private readonly LoserBowl _loserbowl;
         private readonly int _week;
